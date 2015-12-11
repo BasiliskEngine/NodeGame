@@ -1,0 +1,47 @@
+
+body {
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+#header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: white;
+	height: 10%;
+	width: 100%;
+}
+
+#game {
+	position: absolute;
+	/*top: 10%;*/
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: black;
+	/*height: 90%;*/
+	height: 100%;
+	width: 100%;
+}
+
+#test_unit {
+	position: absolute;
+	right: 0;
+	width: 32px;
+	height: 32px;
+	background-color: #3BAD5F;
+	outline: 1px solid black;
+}
+
+#iden {
+	position: absolute;
+	outline: 2px solid black;
+	width: 20%;
+	height: 20%;
+	top: 40%;
+	bottom: 40%;
+	left: 40%;
+	right: 40%;
+}

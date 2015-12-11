@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Node Game</title>
+	</head>
+	<body>
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<% if (error != -1) { %>
+			<div id="error" style="color: red;"><%= error %></div>
+		<% } %>
+		<form autocomplete="off" method="POST">
+			<!-- Fix next line, I purposely didn't pass the csrfToken field correctly -->
+			<input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+			Username: <input type="text" name="username" /><br><br>
+			Password: <input type="password" name="password" /><br><br>
+			Confirm Password: <input type="password" name="confirm_password" /><br><br>
+			<input type="submit" value="Register" />
+		</form>
+
+		<p id="tos">By clicking register, you agree to the <a href="/tos">Terms of Service Agreement.</a>.</p>
+		<p id="register">Already have an account? Login <a href="/">here</a>.</p>
+	</body>
+</html>

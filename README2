@@ -1,0 +1,21 @@
+# Todo: camera (DONE)
+# Todo: Subtiles to show units, resources, and owners on tiles
+# Todo: store on server which client's turn is to go. (Possibly not everybody has their turn at the same time)
+# Todo: NOTE: send minimal data in packets on server and client
+	# (ex: tile id and new type, not all the map data just because one tile was changed)
+# Todo: Send separate packet from server to client when sending map data after the client has received the initial data
+	# This packet will probably be sent to all clients because the data is constantly being sent whenever the map is changed
+	# This packet may only be sent after the end of the universal turns if I decided to use that system
+# Todo: Better packet sending framework on client using Middle class (sort of done)
+# Todo: tile sprites (DONE)
+# Todo: Style sheets (DONE)
+# Todo: Write new map data to JSON file (DONE)
+# Todo: Limit frames (60) (DONE)
+# Todo: game states, loading, and like game, and like turn, and like stuff, and like explore other lands idek
+<***># Todo: Better authentication framework with session tokens and stuff (DONE SORT OF)
+# Todo: Don't unit a tile that has already been united (or do something special)
+# Todo: Modify map data once a tile has been united (DONE)
+# Todo: Server framework to send data for only one tile to the client
+	# Todo: Framework on client to change just this one tile (handle in Middle?)
+# Todo: Add quick way to deunit all tiles in JSON file
+# Todo: Add quicker way to write to JSON map data file whenevr a tile is united (Probably modify instead of rewriting entire file)

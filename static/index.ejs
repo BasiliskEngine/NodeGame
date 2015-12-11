@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Node Game</title>
+		<meta charset="utf-8"></head>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<% if (error != -1) { %>
+			<div id="error" style="color: red;"><%= error %></div>
+		<% } %>
+		<form autocomplete="off" method="POST">
+			<input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+			Username: <input type="text" name="username" /><br><br>
+			Password: <input type="password" name="password" /><br><br>
+			<input type="submit" value="Log In" />
+		</form>
+
+		<p id="register">Don't have an account? Register <a href="/register">here</a>.</p>
+		<p id="notes">Version log and patch notes <a href="/version">here</a>.</p>
+
+		<div id="dev_program">
+			<h1>TurnBased Dev Program</h1>
+			<p id="dp_para">The TurnBased Developer's program is currently not a the top of the to-do list.
+							However, once it is started and ready for a beta release, the Dev Program's members
+							will have access to a non-intrusive and low-level framework that can be used to 
+							write your own mods for the game when it is released. The framework will be powerful,
+							adapted from the framework and actual engine being used to create the game. Dev Program
+							members shoudn't be able to abuse the framework to gain access to most of the back-end code
+							that would be the safety and security of the website and other users at risk. While some
+							developers might find this to be a limitation, the framework will maintain it's low
+							level structure and will have the potential to allow developers to contribute strongly
+							to the growth of the game. Members should have access to a server-side and client side
+							framework, or both, which will allow them to have near total control of their mod shipped
+							on their own version of the game. </p>
+		</div>
+	</body>
+</html>

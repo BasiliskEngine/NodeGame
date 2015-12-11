@@ -1,0 +1,17 @@
+
+body {
+	overflow-x: hidden;
+}
+
+#dev_program {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	right: 0;
+	width: 50%;
+	border-right: dashed;
+}
+
+#dp_para {
+	position: absolute;
+}

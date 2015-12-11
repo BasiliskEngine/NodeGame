@@ -1,0 +1,84 @@
+# Turnbased Game
+# Send tile data using socket.io *Done for the most part*
+# Header on canvas??
+# Handle all tiles and owners on server???
+	(Changed) (Subject to change) # Universal turn for all players (around 24 hours)
+	(Changed) (Subject to change) # All turns resolved every 24 hours
+	# Real time, but layed out and slow (anybody can make a move whenever, but they don't have to, doesn't require constant attention and micro)
+	# More macro based than micro
+# Strategy game to control more of the world than anyone else
+# Possibly BotLand user made bots to help resolve their own turns (much later, after complete gameplay)
+
+# Render home template inside of database call for tile data??
+	# How??
+
+	# Or keep database call always open inside of socket.io connection??
+		# How??
+
+DONE: # READ MAP/LEVEL DATA FROM JSON FILE BECAUSE THAT WORKS SYNCHRONOUSLY!
+# Change to Object Oriented for easy cloning. This will also be good because
+	it will allow me to improve code reusability and I can improve the framework.
+	The main reasoning is because I can deal with asyncrhonous transactions
+	and the class's objects will act as clones of this data. I don't need this
+	for the authentication, because auth is a small module and can be run
+	procedurally with good efficiency. Rather, this will be more effective
+	on a much larger module such as the map, which is constantly going
+	to be updated.
+
+# One test shows 41 unlimited updates before I receive all map data on client, replace this (meantime) with like loading screen. 
+
+# Switched: Handle socket in Game class (no middle.js) To: Handling socket and getting map data in Middle class
+
+# 10000 colored squares doesn't lag, but with textures, it will. 
+# First, make sure that I only render those on screen, 
+# and two, it will probably still lag, so optimize more
+
+# THIS CODE IS THE UGLIEST CODE I HAVE EVER SEEN, SERVER AND CLIENT, FIX EVERYTHING.
+# CALLBACK HELL. MESSY CLASSES. PROCEDURAL AUTH AND STUFF. NOT ENOUGH UNECESSARY CLASSES AND OOP STUFF
+# FIX THIS. YOU SHOULD BE ASHAMED
+
+# TOO MANY COMMENTS YOU AWFUL PROGRAMMER
+
+# Tile(index)
+# FIRST TILE: Tile(0) = (0, 0)
+
+# Updates now limited to 60
+
+# Similar Idea:
+	5 turns or so a day,
+	turns carry over into the next day,
+	resources,
+	elevation (sea level, mountains, even higher, etc.) effects how effectively you can attack
+
+# 4 Section Sample Map
+	# Grass section
+	# Water section
+	# Tree section
+	# Mountain section
+
+# Need to change map to receive new map data whenever in place (possibly every frame)
+  because map data will constantly be changing
+  	# If I do this, I need to make sure that I only get the tiles (x, y) position from it's index on the first time it receives the data
+  	# Otherwise, the player won't be able to scroll
+
+# Dev Program
+	# Framework
+	# Users/Players vote for mods, minigames, or other things created by another player using the Dev Program's framework
+	# Client side and server side frameworks, which both have the potential to interface with one another
+
+# Getting username on client using a hidden element, figure out how to send this data accurately to the actual client-side javascript from the server
+# Bored work: Dev Program
+
+# ID to Coordinate algorithm
+===============================
+id = x + (y * width)
+
+if (id < width) -> (id, 0)
+if (id >= width) -> (id % width, Math.floor(id / width))
+
+rx = x * 48
+ry = y * 48
+
+Don't render tile if off screen
+
+Zoom algorithm?
