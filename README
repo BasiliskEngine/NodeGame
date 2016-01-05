@@ -61,13 +61,7 @@ DONE: # READ MAP/LEVEL DATA FROM JSON FILE BECAUSE THAT WORKS SYNCHRONOUSLY!
   	# If I do this, I need to make sure that I only get the tiles (x, y) position from it's index on the first time it receives the data
   	# Otherwise, the player won't be able to scroll
 
-# Dev Program
-	# Framework
-	# Users/Players vote for mods, minigames, or other things created by another player using the Dev Program's framework
-	# Client side and server side frameworks, which both have the potential to interface with one another
-
 # Getting username on client using a hidden element, figure out how to send this data accurately to the actual client-side javascript from the server
-# Bored work: Dev Program
 
 # ID to Coordinate algorithm
 ===============================
