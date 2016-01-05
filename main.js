@@ -109,7 +109,7 @@ io.on('connection', function(socket) {
 
 http.listen(PORT, '0.0.0.0', function() {
 	console.log("Listening on port *" + PORT);
-	fs.writeFile(__dirname + '/data/test.json', JSON.stringify({name: 'garrett'}, test.array[0], 2), function (err) {
-		if (err) handleError(err);
-	});
+	// fs.writeFile(__dirname + '/data/test.json', JSON.stringify({name: 'garrett'}, test.array[0], 2), function (err) {
+	// 	if (err) handleError(err);
+	// });
 });
