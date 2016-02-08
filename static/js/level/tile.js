@@ -69,6 +69,10 @@ var Tile = Class.extend({
 		if (this.intersects_with(mx, my) && mdown) {
 		 	middle.send('tile_united', {id: this.id, owner: username, united_already: this.united});
 		}
+
+		if (this.intersects_with(mx, my)) {
+			hovered_owner = this.owner
+		}
 	},
 
 	render: function(ctx) {

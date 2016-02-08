@@ -1,4 +1,4 @@
-var PORT = 8080;
+var PORT = 80;
 
 var express = require('express');
 var app = express();
@@ -108,8 +108,16 @@ io.on('connection', function(socket) {
 });
 
 http.listen(PORT, '0.0.0.0', function() {
-	console.log("Listening on port *" + PORT);
-	// fs.writeFile(__dirname + '/data/test.json', JSON.stringify({name: 'garrett'}, test.array[0], 2), function (err) {
-	// 	if (err) handleError(err);
-	// });
+	console.log("Listening on port *" + PORT)
 });
+
+// Works! Clears all units!
+function deunit_all() {
+	for (var i = 0; i < md.tiles.length; i++) {
+		md.tiles[i].owner = "server"
+		md.tiles[i].united = false
+	}
+	fs.writeFile(__dirname + '/data/map.json', JSON.stringify(md, null, 4), function(err) {
+		if (err) handleError(err);
+	});
+}

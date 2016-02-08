@@ -6,6 +6,8 @@ var map = new Map();
 var middle = new Middle(socket);
 var uniform = new Uniform();
 
+var hovered_owner = "";
+
 function main() {
 	init();
 
@@ -53,6 +55,9 @@ function render() {
 	ctx.fillStyle = "#fff";
 	ctx.font = "20px Georgia";
 	ctx.fillText("(Escape + x to logout)", 32, 32);
+
+	ctx.font = "12px Georgia";
+	ctx.fillText("Owner: " + hovered_owner, canvas.width - 128, 32);
 }
 
 function check_fetch() {

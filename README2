@@ -19,3 +19,10 @@
 	# Todo: Framework on client to change just this one tile (handle in Middle?)
 # Todo: Add quick way to deunit all tiles in JSON file
 # Todo: Add quicker way to write to JSON map data file whenevr a tile is united (Probably modify instead of rewriting entire file)
+# Todo: Debug by logging tile owner of (marked/united) tile when hovering over it (on client)
+# Todo: Change so that new units are only written (on the hour?)
+	# Therefore: don't write map data to JSON file on networking events, write on the hour
+# Todo: United tiles have no owner (owner: server)?
+# Todo: Write client system so that if you hover over tile it shows owner
+
+# Todo FIX: Csrf token not defined when authentication error is thrown? (fix)
