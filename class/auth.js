@@ -5,13 +5,13 @@ var ab_count = false;
 function login(req, res, bcrypt, users) {
 	if (!req.body.username)
 	{
-		res.render('index', {error: "Please enter a username"});
+		res.render('index', {error: "Please enter a username", csrfToken: req.csrfToken()});
 		return;
 	}
 
 	if (!req.body.password)
 	{
-		res.render('index', {error: "Please enter a password"});
+		res.render('index', {error: "Please enter a password", csrfToken: req.csrfToken()});
 		return;	
 	}
 	var q = users.find({'username': req.body.username});
@@ -19,14 +19,14 @@ function login(req, res, bcrypt, users) {
 	q.exec(function (err, user) {
 		if (err) return handleError(err);	
 		if (user.length <= 0) {
-			res.render('index', {error: "That user doesn't exist."});
+			res.render('index', {error: "That user doesn't exist.", csrfToken: req.csrfToken()});
 			return;
 		}
 
 		var comp = bcrypt.compareSync(req.body.password, user[0].password);
 		if (comp == false)
 		{
-			res.render('index', {error: "That password doesn't match that user."});	
+			res.render('index', {error: "That password doesn't match that user.", csrfToken: req.csrfToken()});	
 			return;
 		}
 

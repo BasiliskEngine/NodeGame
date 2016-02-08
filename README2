@@ -25,4 +25,4 @@
 # Todo: United tiles have no owner (owner: server)?
 # Todo: Write client system so that if you hover over tile it shows owner
 
-# Todo FIX: Csrf token not defined when authentication error is thrown? (fix)
+# Todo FIX: Csrf token not defined when authentication error is thrown? (DONE)
